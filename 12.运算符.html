@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 运算符 也叫 操作符
+        /**
+         * typeof 也属于运算符
+         *  + - * /
+         */ 
+
+        var a = 123;
+        var res = typeof a;
+        console.log(res);
+
+
+        res = a + 1;
+        console.log(res); // 124
+
+        res = true + 1;
+        console.log(res); // 2
+
+        res = true + false;
+        console.log(res); // 1
+        
+        // 任何值和NaN做运算都得NaN
+        res = 1 + NaN;
+        console.log(res); // NaN
+
+        res = "123" + "456";
+        console.log(res); // 123456
+
+        // 任何值和字符串做加法，都会先转换为 字符串
+        res = 1 + "23";
+        console.log(res); // 123
+
+        res = true + "hello";
+        console.log(res); // truehello
+
+
+        // 除了+其余运算都转为数字
+        res = 123 - "1";
+        console.log(res); // 122
+
+        res = 2 * "1";
+        console.log(res); // 2
+
+        res = 2 * "a";
+        console.log(res); // NaN
+
+        // 取余 %
+        res = 9 % 3;
+        console.log(res); // 0
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

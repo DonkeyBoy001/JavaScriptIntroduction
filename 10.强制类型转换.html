@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /** 将其他的数据类型转换为String
+         *          方法1： 调用被转换数据类型的toString（)方法
+         *          方法2： 使用String() 函数进行转换
+         */ 
+        var a = 123;
+        var b = a.toString();
+        var c = String(a);
+
+        console.log(typeof(a));
+        console.log(a);
+        console.log(typeof(b));
+
+        // 字符串 转数组 Number() 函数
+        // 如果字符串中有非数字的内容，则转换为NaN
+        // 如果字符串是一个空串或者是一个全是空格的字符
+        var a1 = "123";
+        var b1 = Number(a1); // 123
+        console.log(b1);
+
+        a1 = "123abc";
+        b1 = Number(a1);
+        console.log(b1); // NaN
+
+        a1 = "  ";
+        b1 = Number(a1);
+        console.log(b1); // 0
+
+        var d1 = true;
+        b1 = Number(d1);
+        console.log(b1); // 1
+
+
+        // 只转换 字符串中的有效数字部分
+
+        a1 = "123px";
+        b1 = parseInt(a1);
+        console.log(b1); // 123
+        // parseFloat() 用来转换小数
+        a1 = "123.123px"
+        b1 = parseFloat(a1);
+        console.log(b1); // 123.123
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

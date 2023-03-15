@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script type="text/javascript">
+        var a = 123;
+        // 在js中，需要16进制， 以0x开头
+        a = 0x10;
+        console.log(a); // 16
+        a = 0xff; // 255
+        console.log(a);
+        // 八进制 以0开头
+        a = 070;
+        console.log(a); //56
+
+        // 二进制 0b开头
+        a = 0b10;
+        console.log(a); // 2
+        // 可以在parseInt(）中传递一个第二个参数，来指定数字的进制
+        a = "070";
+        console.log(a,10);
+
+        // 转化为boolean值
+        //  除了0 和 null 其余都是true
+        // 除了空串，其余的都是true
+        // null和undefined都会转换为false
+        // 对象也会转换为 true
+        var a2 = 123;
+        console.log(typeof(a2)); // number
+        a2 = Boolean(a2);        
+        console.log(typeof(a2)); // boolean
+        console.log(a2); // true
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
