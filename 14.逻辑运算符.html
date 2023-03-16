@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 与运算，两个值都有true,返回第二个值
+         * 
+         * 两个值中都有false， 返回靠前false
+         */ 
+
+        var res = 5 && 6;
+        console.log(res);
+        res = 0 && 2;
+        console.log(res);
+        res = NaN && 0;
+        console.log(res);
+        res = 0 && NaN;
+        console.log(res);
+
+        // 赋值运算符
+        //  =
+
+        var a = 123;
+        console.log(a);
+        // a+= 5 等价于 a = a + 5
+
+        // 通过关系运算符 比较 两个值的大小
+        // 大于 返回 true
+        // 不成立 返回 false
+        res = 5 > 10; // false
+        res = 5 > 4; // true
+
+
+        // 对于 非数值比较 会 转换为数值 然后进行 比较
+        // hello 转换为 NaN
+        res = 10 > "hello";
+        console.log(res); // true
+
+        // 比较两个字符串 是比较 字符串编码大小
+        res = "a" > "b";
+        console.log(res); // false
+
+
+        // Unicode 万国码 Unicode
+        //  \u 是四进制的
+        console.log("\u2620");
+
+
+        //  == 运算符
+
+        console.log(1 == 1); // true
+        console.log("1" == 1);// true
+        console.log(true == 1);// true
+        console.log(null == 0);// false
+
+
+        /**
+         * undefined 衍生自 null
+         * 所有 这两个值判断时， 返回 true
+         */
+         console.log(undefined == null); // true
+
+        //  NaN 不和 任何值相等
+
+        // 条件运算符
+        // 三元运算符
+        // 语法：    条件表达式?语句1:语句2;
+        // 成立 执行语句1
+        // 不成立 执行语句2
+        
+        var a = 10;
+        var b = 20;
+
+        a > b ? alert("a大") : alert("b大");
+        
+        // 获取 abc中最大值
+        var max = a > b ? a : b;
+        max = max > c ? max : c;
+
+
+        // 运算符优先级
+        //  使用 ， 分割多个语句
+        var a11, b11, c11;
+        alert(b11);
+
+        var a12 = 12, b12 = 12, c12 = 13;
+
+        /**
+         * 优先级
+         * || 的优先级 
+
+    </script>
+</head>
+<body>
+</body>
+</html>

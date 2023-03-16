@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 同一个{}内的语句，称之为 一组 语句
+         */
+         {
+            var a = 10;
+            console.log("hello");}
+        /**
+         * 语句分类：
+         *      1.条件判断语句
+         *      2.条件分支语句
+         *      3.循环语句
+         * 
+         * if(条件表达式) 语句
+         */
+        
+        var a = 11;
+
+        if (a > 10) {
+            console.log("a比10大!");
+        } else if ( a > 100) {
+            console.log("a和100比");
+        }
+
+        var num = 3;
+
+        switch(num) {
+            case 1:
+                console.log("1");
+                break;
+            case 2:
+                console.log("2");
+                break;
+            case 3:
+                console.log("3");
+                break;
+            default:
+                console.log("非法数字");
+                break;
+        }
+
+        // while循环
+        // 网页换行 <br />
+        var n = 100;
+        while(n > 0){
+            document.write(n + " <br />");
+            n--;
+        }
+
+
+        for (var i = 0; i < 10; i++) {
+            document.write(i++);
+        }
+
+        var num = prompt("请输入一个大于1的整数");
+
+        var flag = true;
+        if (num <= 1) {
+            alert("该值不合法!");
+        } else {
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    flag = false;
+                }
+            }
+        }
+
+        if(flag) {
+            alert(num + "是质数");
+        }
+
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

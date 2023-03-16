@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * JS中数据类型
+         * 基本数据类型
+         * String
+         * Number
+         * Boolean
+         * Null
+         * Undefined
+         * 
+         * 非基本类型 统称 Object 
+         * 对象展于一种复合的数据类型
+         * 在对象中可以保存多个不同数据类型的属性
+         * 
+         * 对象分类：
+         *  1.内建对象
+         *      ES标准制定，任何ES中都可以使用
+         *     比如 Math String Number FUNCTION OBJECT
+         * 2. 宿主对象
+         *      JS运行环境提供的对象
+         *      BOM DOM
+         *     比如 console , document
+         * 
+         * 3. 自定义对象
+         *      开发者自己创建
+         * 
+         * 
+         * 对象的基本操作
+         * 使用new 函数 构建 constructor
+         * 
+         */
+        
+         var obj = new Object();
+
+         console.log(typeof obj);
+         
+        //  对象中添加属性
+        obj.name = "monkey";
+        obj.age = 13;
+        console.log(obj);
+        // 读取 对象中没有的属性，不会报错，会返回 undefined
+        console.log(obj.a);
+
+        // 删除属性
+        delete obj.name;
+        console.log(obj);
+
+
+        // 如果要使用特殊的属性名，不能采用.的方式来操作
+        // 需要使用另一种方式语法，对象[“属性名”] = 属性值
+        obj['123'] = 789;
+        console.log(obj);
+        console.log(obj['123']); // 读取也得采用存入的方式
+
+        var n = "nihao";
+        console.log(obj[n]);
+
+        // 判断是否有该 属性
+        console.log("age" in obj);
+
+        // 基本数据类型都是存储在 steak 栈 当中
+        // 引用数据类型（对象） 存储在 heap 堆 当中
+
+        // 比较两个 对象 就是 比较它们的 内存地址
+
+        // 基本类型保存的是 值
+        // 引用类型保存的是 地址
+
+
+        // 使用对象字面量 创建 对象
+        // 两种方式
+        // var obj2 = new Object();
+        var obj1 = {};
+
+        obj1.name = "孙悟空";
+
+        // 创建多个属性
+
+        var obj3 = {name:"猪八戒", 
+                    age:21, 
+                    gender:"男",
+                    test:{name: "沙和尚"}
+                };
+        console.log(obj3);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
