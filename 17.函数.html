@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 函数
+         *  - 函数也是一个对象
+         *  - 函数也可以封装一些功能，带需要时 可以执行这些功能
+         *    
+         */
+
+         // 创建函数对象
+         var fun = new Function("console.log('这是我第一个函数');");
+        // /可以将要封装的代码以字符串的形式传递给构造函数
+        // 使用typeof检查一个函数对象时，会返回 function
+         console.log(typeof(fun)); // function
+         fun(); // 这是我第一个函数
+
+
+         function fun2(){
+            console.log("这是我的第二个函数!");
+            alert("hhh");
+            document.write("!!mm!!");
+         }
+
+         fun2();
+        
+         // 匿名函数
+         // Anonymous function
+        var fun3 = function(){
+            console.log("我是匿名函数");
+         };
+
+         fun3();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

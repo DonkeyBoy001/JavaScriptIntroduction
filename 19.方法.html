@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 函数也可以称为对象的属性，
+         * 如果一个函数作为一个对象的属性保存， 
+         * 调用对象的方法 (method)
+         */
+
+        // 创建一个对象
+        var obj = new Object();
+        // 向对象添加属性
+        obj.name = "孙悟空";
+        obj.age = 18;
+
+        // 对象的属性值 可以是 任何数据类型
+        obj.sayName = function() {
+            console.log(obj.name);
+        };
+
+        // console.log(obj.sayName);
+        obj.sayName();
+
+        var obj2 = {
+            name: "孙武kong",
+            age: 18,
+            gender: "male",
+            address: "花果山"
+        };
+
+        // 枚举对象属性
+
+        for (var n in obj2) {
+            console.log("属性名" + n);
+            console.log("属性值" + obj[n]);
+        }
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

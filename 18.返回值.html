@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function sum(a, b, c){
+            return a + b + c;
+        }
+
+        // 调用函数 
+        // Call the function
+        // 变量res的值就是函数的执行结果
+        var res = sum(4,7,8);
+
+        console.log("res:" + res);
+
+
+        // 判断是否是偶数
+        // Determine whether it is an even number
+        function isEven(num) {
+            // if (num % 2 == 0) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            return num % 2 == 0;
+        }
+
+        var res2 = isEven(3);
+        console.log("res2:" + res2);
+
+        // 函数嵌套 匿名函数
+        // Function Nested Anonymous Function
+        
+        // function fun(function(){alert("hello")});
+        // fun();
+
+        function fun(){
+            // alert("函数要执行了");
+
+            for (var index = 0; index < 5; index++) { 
+                // if (index == 2) break; // 退出循环
+                if (index == 2) continue; // 跳过本次
+                
+                console.log(index);
+            }
+            
+            console.log(index);
+        }
+
+        fun();
+
+
+        // () 括号 圈起 匿名函数
+        // () Enclose anonymous functions in parentheses
+        (function(){
+            console.log("我是一个匿名函数");
+        })(); // 立即执行函数 Execute function immediately
+        
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
