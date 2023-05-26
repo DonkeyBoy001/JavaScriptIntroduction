@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var obj = {
+            name: "zs",
+            age: 18,
+            gender: "female",
+            SayName: function(){
+                alert(this.name);
+            }
+        }
+        // 大批量创建obj
+        function createPerson(name, age, gender){
+            var obj = new Object();
+
+            obj.name = name,
+            obj.age = age,
+            obj.gender = gender,
+            obj.SayName = function(){
+                alert(this.name);
+            }
+
+            return obj;
+        }
+
+
+        var obj2 = createPerson("猪八戒", 11, "male");
+        var obj3 = createPerson("孙悟空", 12, "male");
+        var obj4 = createPerson("沙悟净", 13, "male");
+        // console.log(obj2);
+
+        obj2.SayName();
+        obj3.SayName();
+        obj4.SayName();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
