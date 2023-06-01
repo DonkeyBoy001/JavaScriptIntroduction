@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        // 创建构造函数 专门用于 创建 Person类
+        /**
+         * 首字符大写
+         * 使用new 调用
+         * 
+         * 执行流程:
+         *  1.立即创建新的对象
+         *  2.将新创建对象设置为函数中this, 在构造函数中，通过this 调用对象
+         *  3.执行函数代码
+         *  4.将新创建对象返回
+         * 
+         */
+
+        function Person(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayName = function(){
+                alert(this.name);
+            };
+        }
+         var person1 = new Person("孙悟空", 18, "male");
+         var person2 = new Person("猪八戒", 19, "male");
+         var person3 = new Person("沙和尚", 20, "female");
+
+
+         function Dog(){}
+         var dog = new Dog();
+
+         console.log(person1);
+         console.log(person2);
+         console.log(person3);
+         console.log(dog);
+
+        // 检查 对象 是否是 类 的 一个实例
+         console.log(person1 instanceof Person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

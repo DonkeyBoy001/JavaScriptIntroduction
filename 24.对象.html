@@ -24,7 +24,18 @@
             obj.gender = gender,
             obj.SayName = function(){
                 alert(this.name);
-            }
+            };
+
+            return obj;
+         }
+        
+        function createDog(name, age) {
+            var obj = new Object();
+            obj.name = name,
+            obj.age = age,
+            obj.SayHello = function() {
+                alert("bark! bark!");
+            };
 
             return obj;
         }
@@ -39,7 +50,12 @@
         obj3.SayName();
         obj4.SayName();
 
+        var dog = createDog("旺财",3);
+        dog.SayHello();
 
+        console.log(dog);
+        console.log(obj4);
+        
     </script>
 </head>
 <body>
