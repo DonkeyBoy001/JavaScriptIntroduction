@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 
+         * 创建构造函数*/
+
+         function MyClass(){
+
+         }
+
+         MyClass.prototype.name = "我是元型中的名字";
+
+         var mc = new MyClass();
+
+        //  使用in 检查对象中是否含有 某个属性
+        // 如果对象中没有，但是元型中有， 也会返回true
+         console.log("name" in mc);
+
+        //  可以使用对象的hasOwnProperty()来检查对象自身中是否合有该属性
+        // 该方法 只有自身有 该方法 才会返回true 不检查原形
+         console.log(mc.hasOwnProperty("name"));
+
+         console.log(mc.__proto__.__proto__);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
