@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         * 
+         * 在调用函数时，浏览器每次都会传递进两个隐含的参数：
+         * 1.函数的上下文对象 this
+         * 2.封裝实参的对象 arguments
+         *  - arguments是一个 类数组对象
+         * 可以通过 index 操作数据 获取长度
+         * 在调用函数时，我们所传递的实参都会封裝到arguments中，在arguments中保存
+         * arguments.length可以用来获取实参的长度
+         * 
+         * 即使不定义 形参 也可以通过 arguments获取 实参
+         * 
+         * arguement中还有一个属性callee
+         * 对应一个函数对象，就是当前正在指的函数对象
+         */
+        
+        function fun(){
+            // console.log(arguments instanceof Array);
+            // console.log(Array.isArray(arguments));
+            // console.log(arguments.length);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments.callee == fun);
+        }
+
+        fun();
+
+        fun("hello", true);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

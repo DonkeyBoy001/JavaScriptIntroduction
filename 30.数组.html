@@ -37,6 +37,90 @@
         // 小技巧往数组最后一个位置添加元素
         arr[arr.length] = 999;
         console.log(arr);
+
+
+        var arr2 = [1, 2, 3, 4, 10];
+
+        var arr3 = new Array(1, 2, 3, 4);
+
+        // 创建长度为10的数组
+        var arr4 = new Array(10);
+        
+        // 创建一个数组 ；里面有一个元素为10
+        var arr5 = [10];
+
+        // 数组中元素可以放任何值
+
+        var arr6 = ["hello", null, undefined, 1];
+
+
+        // 创建一个数组的四种方法
+        var arr7 = ["孙悟空", "猪八戒"];
+
+        /**
+         * push() 该方法可以向数组中，添加一个 or 多个元素
+         * 返回值 为 arr7的新长度
+         */ 
+
+         arr7.push("唐僧");
+        console.log(arr7.push("唐1","唐2"));
+
+        /**
+         * pop() 删除并返回数组的最后一个元素
+         */
+        arr7.pop();
+        console.log(arr7);
+        arr7.pop();
+        console.log(arr7);
+
+        // unshift() 
+        // 向数组开头 添加一个 or 多个元素
+
+        arr7.unshift("牛1");
+        console.log(arr7);
+
+        // shift() 删除第一个元素，并返回
+        console.log(arr7.shift());
+        console.log(arr7);
+
+
+        console.log("数组遍历:  ");
+        // 数组遍历
+        for (var i = 0; i < arr7.length; i++) {
+            console.log(arr7[i]);
+        }
+
+
+        // forEach() 方法 遍历数组
+        // 下面函数，我们创建，但是浏览器调用 称为 回调函数
+        // 数组中 几个元素 函数就会 调用几次
+        // 每次执行，都会将 遍历元素 以实参 传入函数
+
+        // 参数1 元素value
+        // 参数2 元素index 索引
+        // 参数3 正在遍历的数组
+        arr7.forEach(function(value, index, obj){
+            console.log(value);
+            console.log(index);
+            console.log(obj);
+        });
+
+        // 该方法不会改变元素数组，而是将截取到的元素封装到一个新数组中返回
+        // 截取开始的位置的索引 
+        // 截取结束的位置的索引
+        //  第二个参数可以省略不写
+        // 也可以传入 负值 -1表示倒数第一个， -2 表示倒数第二个
+        var arr8 = arr7.slice(0, 1);
+        console.log(arr8);
+
+        // splice()
+        // 用于 删除 数组中的 指定元素
+        // 两个参数 
+        // 第一个： 开始位置索引   第二个： 长度
+        // 第三个： 插入元素
+        arr7.splice(0,2,"插入1");
+
+            
     </script>
 </head>
 <body>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fun(){
+            alert("我是fun函数");
+        }
+
+       
+
+        /**
+         * call() 和 apply() 都是函数对象的方法，需要通过函数对象调用
+         * 都是调用函数执行
+         */
+        //  在调用 call（）和apply（）可以将一个对象指定为一个参数，此时这个对象将会成为函数执行时的this 
+        // 下面三种都是调用函数
+        fun();
+        fun.call();
+        fun.apply();
+
+        var obj = new Object();
+        fun.apply(obj);
+
+        // call()方法可以将实參在对象之后依次传递
+        // apply需要封装到数组内 传递
+
+        fun.call(obj, 1, 2);
+        fun.apply(obj,[1, 2]);
+
+// this的情況：
+
+// 1.以函数形式调用时，this永远都是window
+
+// 2.以方法的形式调用时，this是调用方法的对象
+
+// 3.以构造函数的形式调用时，this是新创建的那个对象
+
+// 4.使用call和apply调用时，this是指定的那个对象
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
