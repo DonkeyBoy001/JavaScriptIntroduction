@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var str = "Hellow Atguigu";
+
+        console.log(str.length);
+        console.log(str[0]);
+
+        // charAt() 返回字符
+        // 根据索引获取指定的字符
+        var c = str.charAt(0);
+        console.log(c);
+
+        // 获得unicode编码
+        console.log(str.charCodeAt(0));
+
+        // 根据unicode获取编码
+        console.log(String.fromCharCode(72));
+        
+        // concat() 用来连接两个 or 多个字符串
+        var res = str.concat("你好","你好2");
+        console.log(res);
+        
+        // indexof()
+        // 该方法可以检索 字符串中是否包含以下指定内容
+        // 找到返回 index 找不到 返回 -1
+        console.log(str.indexOf("e")); // e在index为1的位置
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

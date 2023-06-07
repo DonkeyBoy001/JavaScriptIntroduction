@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 什么是DOM Document Object Model
+
+            /*
+            通过DOM 操作 HTML文档 
+            文档
+                一个网页就是 一个文档
+            对象
+                对象表示将网页中的每一个部分都转换为了一个对象。
+            模型
+                对象之间的关系
+
+            节点 Node 
+                分为4类
+                文档节点 HTML
+                元素节点 HTML标签
+                属性节点 元素属性
+                文本节点 文本内容
+            */
+
+           
+    </script>
+</head>
+<body>
+    <button id="btn"></button>
+    <script type="text/javascript">
+        // 浏览器已经为我们提供 文档节点 这个对象  是 window属性
+        // 可以在 页面直接用， 该文档节点 代表 整个网页
+        console.log(document);
+        
+        // 获取button对象
+        var btn = document.getElementById("btn");
+        console.log(btn);
+        // 修改btn内文字
+        btn.innerHTML = "I'm Button";
+        
+    </script>
+</body>
+</html>
