@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer{
+            width: 1000px;
+            margin: 50px auto;
+            pad: 200px;
+            background-color: yellow;
+            /* 设置文本居中 */
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            /**
+             * 点击按钮切换图片
+             */ 
+
+            //  获取两个按钮
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+
+            // 获取图片标签
+            var img = document.getElementsByTagName("img")[0]; //只有1个
+
+            // 创建一个数组arry 用来保存 图片路径
+            var imgArr = ["./imgs/t1.jpg","./imgs/t2.jpg","./imgs/t3.jpg","./imgs/t4.jpg"];
+
+            // 创建index
+            var index = 0;
+
+
+            // 切换图片就是修改img的src属性 
+            prev.onclick = function(){
+                // alert("The previous one");
+                index--;
+                if (index <= 0) {index = 3};
+                img.src = imgArr[index];
+            }
+
+            next.onclick = function(){
+                index++;
+                if (index == 4) {index = 0};
+                img.src = imgArr[index];
+                // alert("The next one");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <img src="./imgs/t1.jpg" alt="Popsicle">
+        <button id="prev">previous</button>
+        <button id="next">next</button>
+    </div>
+</body>
+</html>
