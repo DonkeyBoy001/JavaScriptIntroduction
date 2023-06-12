@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+            window.onload = function() {
+
+                // 获取body标签
+                // var body = document.getElementsByTagName("body")[0];
+                // 在ducument中有一个属性body，它保存的是body的引用
+                var body = document.body;
+                
+                // document.documentElement保存的是html根标签
+                var html = document.documentElement;
+                console.log(body);
+                console.log(html);
+
+                // document.al1代表页面中所有的元素
+                var all = document . all;
+                
+                for (var i = 0; i < all.length; i++) console.log(all[i]);
+
+
+                // 根据元素的class属性值查询一组元素节点对象
+                var box1 = document.getElementsByClassName("box1");
+                console.log(box1.length);
+
+                // document.querySelector()
+                // 使用该方法总会返回唯一的一个元素，如果满足条件的元素有多个，那么它只会返回第-个
+                var divs = document.querySelectorAll(".box1");
+                // alert(divs[1].innerHTML);
+                console.log(divs[0].innerHTML);
+
+            }
+
+    </script>
+</head>
+<body>
+    <div class="box1"></div><div>我是box1中的div</div>
+    <div class="box1"></div>
+</body>
+</html>

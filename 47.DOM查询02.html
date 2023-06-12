@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript">
+
+        // 定义一个函数，专门用来为指定元素绑定单击响应函数
+        // 参数1： idStr 要绑定单击响应函数的对象的id属性值
+        // 参数2： fun 事件的回调函数，当单击元素时，该函数将会被触发
+
+        function myClick(idStr, fun){
+
+            var btn = document.getElementById(idStr);
+
+            btn.onclick = fun;
+        }
+
         window.onload = function(){
             //查找＃bj节点
             // 获取btn对象
@@ -77,6 +89,50 @@
                 alert(fir.innerHTML);
 
             }
+
+
+
+            // 为id为btn07的按钮绑定函数
+            myClick("btn07", function(){
+                // alert("hello");
+                // 返回 id为bj的父节点
+
+                var bj = document.getElementById("bj");
+                var pn = bj.parentNode;
+                alert(pn.innerHTML);
+
+                // innerText
+                // 该属性可以获取到 元素内部的内容
+                // 它和innerHTML类似，不同的是它会自动将htm1去除
+                // alert(pn.innerText);
+            });
+            
+            // 为id为btne8的按钮绑定一个单击响应函数 
+            myClick("btn08", function() { 
+                //获取id为android的元素
+                var and = document.getElementById("android");
+
+                //返回#android的前一个兄弟节点 （也可能获取到空白的文本）
+                // var ps = and.previousSibling;
+                // and.previousElementSibling; (不包含空格)
+                var ps = and.previousElementSibling;
+                alert(ps.innerText);
+
+            });
+
+            //读取#username的value属性值
+            myClick("btn09", function() {
+                var um = document.getElementById("username");
+                alert(um.value);
+            });
+
+            // 返回#bj的文本值
+            myClick("btn10", function() {
+                var bj = document.getElementById("bj");
+                alert(bj.innerText);
+            });
+
+
         }
 
 
